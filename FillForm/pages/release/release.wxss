@@ -1,0 +1,4 @@
+/* pages/release/release.wxss */
+page{
+  background-color: #f2f6fc;
+}

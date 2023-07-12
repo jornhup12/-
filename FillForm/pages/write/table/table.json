@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "ff-questionnaire": "/components/ff-questionnaire/ff-questionnaire"
+  }
+}

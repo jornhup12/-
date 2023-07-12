@@ -1,0 +1,46 @@
+<!--pages/table/add/item.wxml-->
+
+<form bindsubmit="submitForm">
+  <view class="cu-form-group margin-top-xl margin">
+    <view class="cu-form-group" style="width:100%;">
+      <view class="cu-input round padding-xs margin-tb" style="border: 1px solid gray;width:100%;">
+        <input name="title" placeholder="请输入标题" type="text" value="{{title}}" bindinput="titleInput" />
+      </view>
+    </view>
+  </view>
+
+<!-- 新增选项 -->
+  <view class="cu-form-group margin flex flex-direction" wx:if="{{type=='singleOption'||type=='multiOption'}}">
+    <view class="cu-form-group" style="width:100%;">
+      <view class="cu-input round padding-xs margin-tb" style="border: 1px solid gray;width:100%;">
+        <input name="optioning" placeholder="请输入选项" type="text" bindinput="optioningInput" />
+      </view>
+    </view>
+    <view>
+      <button class="padding-tb cu-btn bg-yellow round lg margin-bottom" bindtap="addOption">添加选项</button>
+    </view>
+    <view class="flex" style="width:100%;" wx:for="{{options}}" wx:key="index">
+      <view class="cu-form-group" style="width:100%;" >
+      <!-- 删除选项 -->
+        <view class="margin-right-xs" bindtap="deleteOption" data-index="{{index}}"><text class="cuIcon-close text-white bg-red round lg padding-xs"></text> </view>
+        <view class="cu-input round padding-xs " style="border: 1px solid gray;width:100%;">
+          <input name="option" placeholder="请输入选项" type="text" value="{{item.label}}" style="width:100%;" disabled />
+        </view>
+      </view>
+    </view>
+  </view>
+
+<view class="cu-form-group margin  flex-direction">
+  <view class="cu-form-group " style="width: 50%;">
+    <view class="cu-input round padding-xs margin-tb flex justify-between align-center" style="border: 1px solid gray;width:100%;">
+      <text> 必选 </text>
+      <switch name="mandatory" checked="{{mandatory}}" bindchange="isRequiredChange" />
+    </view>
+  </view>
+</view>
+
+
+  <view class="cu-bar margin-top: 20px; text-align: center;">
+    <button class="cu-btn bg-blue round lg" form-type="submit">提交</button>
+  </view>
+</form>

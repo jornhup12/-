@@ -1,0 +1,3 @@
+<!--pages/table/fill/fill.wxml-->
+
+<ff-questionnaire tables="{{questionnaire.tables}}" tableName="{{questionnaire.tableName}}" tableDescription="{{questionnaire.tableDescription}}" bind:onSubmit="onSubmit"></ff-questionnaire>

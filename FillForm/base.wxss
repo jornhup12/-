@@ -1,0 +1,165 @@
+
+.bg-select {
+  background-color: #75a9be;
+  color: white;
+}
+
+.bg-unselect {
+  background-color: #f1f1f1;
+  color: #8e8e8e;
+}
+
+.tabbar {
+  position: fixed;
+  bottom: -50rpx;
+  width: 100%;
+  z-index: 9999;
+}
+
+.bg-commonGreen {
+  background: #bbd38b;
+}
+
+.line-commonGreen {
+  border-color: #bbd38b;
+  color: #bbd38b;
+}
+
+.text-commonGreen {
+  color: #bbd38b;
+}
+.solid-commonGreen{
+	border: 1rpx solid #bbd38b;
+}
+.solid-commonGreen-lg{
+  border: 5rpx solid #bbd38b;
+  box-sizing: content-box;
+}
+.avatar {
+  border-radius: 10rpx;
+}
+
+.loading-bg {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+}
+
+.loading-image {
+  width: 300rpx;
+}
+/* 图片删除 */
+.upload-close{
+  position: absolute;
+  top: -0;
+  right: -0;
+  z-index: 999;
+  height: 30rpx;
+  width: 30rpx;
+  background: #f1f1f1;
+  /* border-radius: 50%; */
+}
+
+
+/* 配色 */
+
+/* 深蓝色 */
+.bg-deepBlue {
+  background: #06415f;
+}
+
+.line-deepBlue {
+  border-color: #06415f;
+  color: #06415f;
+}
+
+.text-deepBlue {
+  color: #06415f;
+}
+
+/* 浅蓝色 */
+.bg-wathet {
+  background: #086a88;
+}
+
+.line-wathet {
+  border-color: #086a88;
+  color: #086a88;
+}
+
+.text-wathet {
+  color: #086a88;
+}
+
+/* 天蓝色 */
+.bg-skyBLue {
+  background: #79a9bb;
+}
+
+.line-skyBLue {
+  border-color: #79a9bb;
+  color: #79a9bb;
+}
+
+.text-skyBLue {
+  color: #79a9bb;
+}
+
+/* 天蓝色 */
+.bg-grayBLue {
+  background: #d3dadb;
+}
+
+.line-grayBLue {
+  border-color: #d3dadb;
+  color: #d3dadb;
+}
+
+.text-grayBLue {
+  color: #d3dadb;
+}
+
+/* 完全居中 */
+.water-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-sm {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.icon {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.icon-lg {
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.water-icon {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.water-icon-sm {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.water-icon-lg {
+  width: 150rpx;
+  height: 150rpx;
+}
+/* 浮窗 */
+.water-float-window{
+  position:absolute;
+  right: 0;
+  bottom: 80rpx;
+}

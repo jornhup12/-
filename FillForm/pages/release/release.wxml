@@ -1,0 +1,24 @@
+<!--pages/release/release.wxml-->
+<!-- 选择 -->
+<scroll-view scroll-x class="bg-white nav">
+  <view class="flex text-center">
+    <view class="cu-item flex-sub {{index==TabCur?'text-orange cur':''}}" wx:for="{{TabList}}" wx:key bindtap="tabSelect" data-id="{{index}}">
+      {{item}}
+    </view>
+  </view>
+</scroll-view>
+
+
+<view wx:if="{{TabCur==0}}">
+  <view class="margin raduis" wx:for="{{questionnaireList}}">
+    <ff-publish participationCount="{{1}}" questionnaire="{{item}}" bind:fillForm="fillForm" bind:deleteForm="deleteForm"></ff-publish>
+  </view>
+</view>
+<view wx:else="{{TabCur==1}}">
+  <view class="" style="margin: 10rpx;border-bottom: 2rpx solid #007aff; " wx:for="{{questionnaireFillList}}" bindtap="navigateToFillForm" data-index="{{index}}">
+    <view class="list-item flex  justify-between padding">
+      <view class="list-item-title" style="font-size: 32rpx;">{{item.content.tableName}}</view>
+      <view class="list-item-time">{{item.create_time}}</view>
+    </view>
+  </view>
+</view>

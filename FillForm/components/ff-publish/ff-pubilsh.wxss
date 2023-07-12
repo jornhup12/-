@@ -1,0 +1,5 @@
+/* component/ff-publish/ff-pubilsh.wxss */
+@import "../../app.wxss";
+.cu-list button {
+  width: 30%;
+}

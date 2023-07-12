@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "我发布的",
+  "usingComponents": {
+    "ff-publish": "/components/ff-publish/ff-pubilsh"
+  }
+}

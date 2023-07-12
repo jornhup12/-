@@ -1,0 +1,4 @@
+/* pages/table/fill/fill.wxss */
+page{
+  background-color: #f2f6fc;
+}

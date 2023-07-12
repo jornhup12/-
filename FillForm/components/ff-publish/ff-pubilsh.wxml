@@ -1,0 +1,29 @@
+<!--component/ff-publish/ff-pubilsh.wxml-->
+<view class="cu-bar bg-white solid-bottom margin-top">
+  <view class="action">
+    <text class="cuIcon-title text-orange"></text> {{questionnaire.tableName}}
+  </view>
+  <view class="action">
+    参与：{{questionnaire.fill_count}}
+  </view>
+</view>
+<view class="cu-list grid col-3 no-border">
+  <button class="cu-item bg-white" open-type="share" bindtap="onShare" data-id="{{questionnaire.id}}">
+    <view class="cuIcon-share text-red"></view>
+    <text>分享</text>
+  </button>
+  <button class="cu-item bg-white" bindtap="fillForm">
+    <view class="cuIcon-write text-blue"></view>
+    <text>填写</text>
+  </button>
+  <button class="cu-item bg-white" bindtap="deleteForm">
+    <view class="cuIcon-delete text-orange"></view>
+    <text>删除</text>
+  </button>
+</view>
+<view class="menu bg-white">
+  <view class="cu-item flex justify-between padding-sm" style="padding-top:0">
+    <text></text>
+    <text class="text-gray">{{questionnaire.create_time}}</text>
+  </view>
+</view>

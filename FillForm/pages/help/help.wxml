@@ -1,0 +1,9 @@
+<!--pages/help/help.wxml-->
+<view class="help-content" style="padding: 20rpx;background-color:white;border-radius:20rpx;margin:10rpx;">
+  <view class="help-title">1. 本程序的作用？</view>
+  <view class="help-answer" style="margin-top: 10rpx;">快速创建任意表单，分享到微信群即可完成扫码参与表单填写，获取大家填报的表单数据，随时随地完成收集、统计数据。</view>
+  <view class="help-title" style="margin-top: 20rpx;">2. 如何创建表单？</view>
+  <view class="help-answer" style="margin-top: 10rpx;">A：可以根据模板快速创建；B：可以根据自己创建表单，快速复制创建；C：采用自定义表单，任意添加需要收集的问题名称及填报数据的类型（选择或文本输入等）</view>
+  <view class="help-title" style="margin-top: 20rpx;">3. 如何邀请其他人参与表单填写？</view>
+  <view class="help-answer" style="margin-top: 10rpx;">创建表单成功后，可以通过转发表单的活动群，其他人通过直接点击活动，即可跳转到您创建的表单填报页面。用户完成填报后，您即可统计到所有已完成填报用户的数据。</view>
+</view>

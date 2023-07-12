@@ -1,0 +1,56 @@
+<!--pages/mine/mine.wxml-->
+<scroll-view scroll-y class="scrollPage">
+  <view class="UCenter-bg">
+    <view class="cu-avatar circle lg">
+      <view wx:if="{{userInfo.avatar}}">
+        <image src="{{userInfo.avatar}}" mode="aspectFill" class="avatar" />
+      </view>
+      <view wx:else>
+        <button class="cu-btn bg-green shadow-blur round" open-type="getUserInfo" bindgetuserinfo="backuserInfo" bindtap="backuserInfo">授权登录</button>
+      </view>
+    </view>
+  </view>
+  <view class="padding flex text-center text-grey bg-white shadow-warp">
+    <view class="flex flex-sub flex-direction solid-right">
+      <view class="text-xxl text-orange">{{user_questionnaire_count}}</view>
+      <view class="margin-top-sm">
+        <text class="cuIcon-attentionfill"></text> 我发布的
+      </view>
+    </view>
+    <view class="flex flex-sub flex-direction solid-right">
+      <view class="text-xxl text-blue">{{user_fill_questionnaire_count}}</view>
+      <view class="margin-top-sm">
+        <text class="cuIcon-favorfill"></text> 我参与的
+      </view>
+    </view>
+    <view class="flex flex-sub flex-direction">
+      <view class="text-xxl text-green">{{3}}</view>
+      <view class="margin-top-sm">
+        <text class="cuIcon-fork"></text> 其他
+      </view>
+    </view>
+  </view>
+  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+    <view class="cu-item arrow">
+      <navigator class="content" url="/pages/help/help" hover-class="none">
+        <text class="cuIcon-question text-green"></text>
+        <text class="text-grey">帮助中心</text>
+      </navigator>
+    </view>
+   
+    <view class="cu-item arrow">
+      <navigator class="content flex" url="/pages/feedback/feedback" hover-class="none">
+        <text class="cuIcon-writefill text-cyan"></text>
+        <text class="text-grey">意见反馈</text>
+      </navigator>
+     
+    </view>
+    <button class="cu-item arrow" style="width:100%;"open-type="share">
+      <navigator class="content flex" url="/pages/about/test/list" hover-class="none">
+        <text class="cuIcon-share text-orange"></text>
+        <text class="text-grey" style="font-weight:normal;font-weight: bold;">分享好友</text>
+      </navigator>
+    </button>
+  </view>
+  <view class="cu-tabbar-height"></view>
+</scroll-view>

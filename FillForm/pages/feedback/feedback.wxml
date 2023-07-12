@@ -1,0 +1,23 @@
+<!--pages/feedback/feedback.wxml-->
+<view class="">
+
+  <view class="cu-bar flex align-center justify-center">
+    <view class="cu-bar__center text-black text-lg">用户反馈</view>
+  </view>
+  <view class="cu-form-group flex flex-direction" style="background:none">
+    <view class="cu-form-group__title  text-center" style="width:100%;">请填写您的反馈意见</view>
+  </view>
+
+  <view class="cu-form margin-lg bg-white radius padding">
+    <view class="cu-form-group flex flex-direction" style="background:none">
+      <view class="cu-form-group__title text-lg text-blue" style="border-bottom: 2rpx solid #007aff;width:100%;"><text class="text-red">*</text>1.详细说明</view>
+    </view>
+    <view class="">
+      <textarea bindinput="inputChange" class="cu-textarea" placeholder="请输入您的反馈内容" style="background-color: white; height: 300rpx;  width: 100%;"></textarea>
+    </view>
+    <view class="cu-form-group">
+      <button class="cu-btn round block bg-blue shadow-lg" bindtap="submitFeedback">提交反馈</button>
+    </view>
+  </view>
+
+</view>

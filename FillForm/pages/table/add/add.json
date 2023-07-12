@@ -1,0 +1,8 @@
+{
+  
+  "navigationBarTitleText": "新建表单",
+  "usingComponents": {
+    "ff-questionnaire": "/components/ff-questionnaire/ff-questionnaire"
+  }
+
+}

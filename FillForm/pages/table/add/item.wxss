@@ -1,0 +1,4 @@
+/* pages/table/add/item.wxss */
+page{
+  background-color: #f2f6fc;
+}

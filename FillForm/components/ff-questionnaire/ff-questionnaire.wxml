@@ -1,0 +1,79 @@
+<!--components/ff-questionnaire/ff-questionnaire.wxml-->
+<view class="title" style="text-align:center;font-size:30px;">{{tableName}}
+</view>
+  <view class="description" style="margin: 10px 20px;">{{tableDescription}}
+  </view>
+
+  <view class="" wx:for="{{tables}}">
+    <view>
+      <view class="cu-form-group flex flex-direction" style="background:none">
+        <view class="cu-form-group__title text-lg text-blue flex justify-between" style="border-bottom: 2rpx solid #007aff;width:100%;">
+          <view>
+            <text class="text-red" wx:if="{{item.mandatory}}">*</text>
+            <text> {{index + 1}}、 {{item.title}}</text>
+          </view>
+          <text class="cuIcon-delete text-red" style="font-size: 15px; margin-left: 10px;" wx:if="{{delete}}" bindtap="deleteItem" data-index="{{index}}"> 删除</text>
+        </view>
+      </view>
+      <!-- 单行 -->
+      <view wx:if="{{item.type=='singleLine'}}">
+        <view class="cu-input radius padding-xs " style="border: 1px solid gray;width:90%;margin: 5%;margin-top: 0;">
+          <input name="optioning" placeholder="请填写" type="text" bindinput="lineInput" data-index="{{index}}" 
+          disabled="{{!enableFill}}" value="{{item.content}}"/>
+        </view>
+      </view>
+      <!-- 多行 -->
+      <view wx:if="{{item.type=='multiLine'}}">
+        <view class="cu-input radius padding-xs " style="border: 1px solid gray;width:90%;margin: 5%;margin-top: 0;">
+          <textarea name="optioning" placeholder="请填写" bindinput="lineInput" style="width:90%;margin: 5%;margin-top: 0;" data-index="{{index}}" disabled="{{!enableFill}}" value="{{item.content}}"></textarea>
+        </view>
+      </view>
+      <!-- 单选 -->
+      <view wx:if="{{item.type=='singleOption'}}">
+        <view class="cu-form-group__content">
+          <radio-group bindchange="getSingleOptionValue" data-index="{{index}}" style="display: flex; flex-wrap: wrap;" >
+            <block wx:for="{{item.options}}"  wx:for-item="items" wx:for-index="indexs">
+              <label class="cu-radio margin-right-sm margin-bottom-sm" style="width: 45%; margin-left: 5%; margin-top: 5px;">
+                <radio checked="{{item.content == indexs}}" value="{{indexs}}" disabled="{{!enableFill}}"/> 
+                <text class="margin-left">{{items.label}}</text>
+              </label>
+            </block>
+          </radio-group>
+        </view>
+      </view>
+
+      <!-- 多选 -->
+      <view wx:if="{{item.type=='multiOption'}}">
+        <view class="cu-form-group__content">
+          <checkbox-group bindchange="getMultiOptionValue" data-index="{{index}}"  style="display: flex; flex-wrap: wrap;" disabled="{{!enableFill}}">
+            <block wx:for="{{item.options}}" wx:key="index" wx:for-item="items" wx:for-index="indexs">
+              <label class="cu-checkbox margin-right-sm margin-bottom-sm" style="width: 45%; margin-left: 5%; margin-top: 5px;">
+                <checkbox value="{{indexs}}"  checked="{{item.content[indexs]}}" disabled="{{!enableFill}}"/>
+                <text class="margin-left">{{items.label}} </text>
+              </label>
+            </block>
+          </checkbox-group>
+        </view>
+      </view>
+
+      <!-- 图片 -->
+      <view wx:if="{{item.type=='pic'}}" class="">
+        <view class="grid col-4 grid-square flex-sub margin-left">
+          <view class="bg-img" wx:if="{{item.content}}" bindtap="ViewImage" data-url="{{imageUrl + item.content}}">
+            <image src='{{imageUrl + item.content}}' mode='aspectFill'></image>
+            <view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+              <text class="cuIcon-close"></text>
+            </view>
+          </view>
+          <view class="solids" bindtap="ChooseImage" wx:else data-index="{{index}}">
+            <text class="cuIcon-cameraadd"></text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 提交 -->
+  <view class="cu-bar bg-white margin-top: 20px; text-align: center;">
+    <button class="cu-btn bg-blue round lg" bindtap="submitForm" wx:if="{{enableFill}}">提交</button>
+    <button class="cu-btn bg-red round lg" bindtap="deleteItem" wx:else>删除</button>
+  </view>

@@ -1,0 +1,49 @@
+{
+  "pages":[
+    "pages/write/write",
+    "pages/write/table/table",
+    "pages/release/release",
+    "pages/table/table",
+    "pages/table/add/add",
+    "pages/table/add/item",
+    "pages/table/fill/fill",
+    "pages/mine/mine",
+    "pages/help/help",
+    "pages/feedback/feedback",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar":{
+    "list": [
+      {
+        "pagePath": "pages/write/write",
+        "text": "常用表单",
+        "iconPath": "images/write.png",
+        "selectedIconPath": "images/write_sel.png"
+      }, {
+        "pagePath": "pages/release/release",
+        "text": "我发布的",
+        "iconPath": "images/release.png",
+        "selectedIconPath": "images/release_sel.png"
+      }, {
+        "pagePath": "pages/table/table",
+        "text": "新建表单",
+        "iconPath": "images/table.png",
+        "selectedIconPath": "images/table_sel.png"
+      }, {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/mine.png",
+        "selectedIconPath": "images/mine_sel.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
